@@ -1,3 +1,4 @@
+#datatypes
 #integer
 a=10
 print("a=",a,"| Type:",type(a))
