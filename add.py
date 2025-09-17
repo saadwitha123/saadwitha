@@ -6,7 +6,7 @@ if resultAND:
     print("result is true")
 if resultOR:
     print("result1 is true")
-#not   
+  
 z = False
 if not z:
    print("result2 is true")
