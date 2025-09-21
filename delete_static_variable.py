@@ -7,6 +7,8 @@ del Student.school
 
 
 
+
+
 class Student:
     # Static variable
     school_name = "ABC High School"
