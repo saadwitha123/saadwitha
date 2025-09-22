@@ -32,3 +32,18 @@ od = collections.OrderedDict()
 od["first"] = 1
 od["second"] = 2
 print("OrderedDict Example:", od)
+
+# Counter
+# Counts how many times each element occurs.
+# Example: {'apple': 3, 'banana': 2, 'orange': 1}
+# namedtuple
+# Creates simple classes for grouping data.
+# Example: Instead of using a tuple (10,20), you can use Point(x=10, y=20).
+# deque (Double-Ended Queue)
+# Faster than lists for adding/removing items at both ends.
+# Example: [0,1,2,3,4].
+# defaultdict
+# Automatically creates a default value if a key doesn’t exist.
+# Example: if you access dd['c'], it will return 0 instead of an error.
+# OrderedDict
+# Like a normal dict, but remembers the order keys were inserted (before Python 3.7, dicts didn’t guarantee order).
