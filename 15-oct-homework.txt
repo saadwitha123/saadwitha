@@ -1,0 +1,116 @@
+----Jenkins
+it is an open-source automation tool used mainly for Continuous Integration (CI) and Continuous Delivery (CD) — often called CI/CD.
+--Definition
+Jenkins is a DevOps tool written in Java that helps automate:
+
+Building code
+
+Testing code
+
+Deploying applications
+
+In short:
+Jenkins automates the steps that developers usually do manually — like compiling, testing, and deploying software.
+
+--Key Features
+
+Open-source and free
+
+Supports plugins (over 1800!) for almost any DevOps tool
+
+Integrates with Git, Docker, AWS, Kubernetes, Maven, etc.
+
+Runs pipelines automatically whenever code changes (CI/CD)
+
+Web-based dashboard to monitor builds
+
+
+----Unit Test Cases
+Definition:
+A unit test case is a small piece of code written to test a single part (unit) of your program — such as a function, method, or class — to make sure it works correctly.
+-Simple Explanation
+
+Think of your program like a big machine made of many small parts.
+A unit test checks each part individually to confirm that it does what it’s supposed to do — before you combine them all.
+
+
+----TDD – Test Driven Development
+Definition:
+Test Driven Development (TDD) is a software development approach where you write tests before writing the actual code.
+
+It means:
+
+Write a test for what you want the code to do.
+
+Run it — it fails (because the code doesn’t exist yet).
+
+Write just enough code to make the test pass.
+
+Refactor the code and run tests again.
+
+TDD Cycle (The “Red → Green → Refactor” Loop)
+Red	Write a test	Test fails
+Green	Write code to pass the test	Test passes
+Refactor	Clean up code	Keep test passing
+
+
+
+----PDD – Product Driven Development
+Definition:
+
+Product Driven Development (PDD) is an approach focused on building the product around user needs and business goals — not just code or tests.
+
+It means development decisions are made based on:
+
+Product requirements
+
+User feedback
+
+Market research
+
+Business value
+
+
+---Alternative Servers You Can Use with FastAPI
+Hypercorn, WebSockets, Daphne,
+Gunicorn + Uvicorn workers,
+Trio/AnyIO-based servers,	
+Waitress
+
+
+---API Gateway
+Definition:
+
+An API Gateway is a server that acts as an entry point for all client requests to your backend services (like microservices).
+
+It manages, routes, and secures API requests before they reach the actual application servers.
+
+
+----Firewall
+Definition:
+
+A Firewall is a network security system that monitors and controls incoming and outgoing traffic based on security rules.
+
+It acts as a barrier between a trusted network (like your internal server) and an untrusted one (like the Internet).
+
+
+
+----Types of Firewalls
+Type:
+Network Firewall
+Application Firewall
+Web Application Firewall (WAF)
+Host-based Firewall
+
+
+
+----What is Deployment?
+
+Deployment means releasing or delivering an application (code, database, or service) from a development environment to a production or live environment where users can access it.
+--Types of Deployments
+1. Recreate Deployment
+2. Rolling Deployment
+3. Blue-Green Deployment
+4. Cloud Deployment
+5. Hybrid Deployment
+16. Multi-cloud Deployment
