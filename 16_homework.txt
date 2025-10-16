@@ -1,0 +1,77 @@
+----What is a Role-Based Website?
+
+A role-based website is a web application that gives different access, features, or permissions to users depending on their role (like Admin, User, Manager, etc).
+
+In other words, not all users can see or do the same things — what they can access depends on their role.
+ Example
+
+Let’s imagine a School Management Website:
+
+Role	What they can do
+ Teacher	Add marks, view student lists
+ Student	View marks, download assignments
+ Admin	Add or remove teachers and students, manage all data
+
+
+----What is Microservices Architecture?
+
+Microservices is a way of building a big application by splitting it into many small, independent services, where each service has a specific job.
+
+Each service runs independently, has its own database, and communicates with others through APIs.
+Simple Definition:
+
+Microservices = Breaking a big app into small parts (services) that work together.
+
+
+
+----What are Variable Length Parameters?
+
+Sometimes you don’t know how many arguments a function will receive.
+
+Python allows you to write functions that can take any number of arguments using *args and **kwargs.
+
+1. *args → Variable-Length Positional Arguments
+
+It allows you to pass any number of positional arguments (without keyword names).
+
+Inside the function, they are stored as a tuple.
+
+ Example:
+def add_numbers(*args):
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+print(add_numbers(2, 4, 6))
+print(add_numbers(10, 20, 30, 40))
+
+
+2. **kwargs → Variable-Length Keyword Arguments
+
+It allows you to pass any number of keyword arguments (with names).
+
+Inside the function, they are stored as a dictionary.
+
+Example:
+def show_details(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+show_details(name="Saadwitha", age=21, city="Hyderabad")
+
+
+3. Combine Normal, *args, and **kwargs
+
+You can use all three in one function:
+
+def demo(a, b, *args, **kwargs):
+    print("a:", a)
+    print("b:", b)
+    print("args:", args)
+    print("kwargs:", kwargs)
+
+demo(1, 2, 3, 4, 5, name="Saad", city="Hyderabad")
+
+
+
