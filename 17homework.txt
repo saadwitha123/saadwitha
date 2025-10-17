@@ -1,0 +1,77 @@
+-----how can you integration gmail in fastapi
+Integrating Gmail in a FastAPI application can be done in two main ways — depending on what you want to do:
+
+*Send emails using Gmail SMTP (simpler)
+
+*Access Gmail (read, send, manage emails) via the Gmail API (secure and advanced)
+
+Let’s look at both options 
+
+---Send Emails using Gmail SMTP
+#Step-by-Step:
+Step 1: Enable “App Passwords” in Gmail
+
+Since Google no longer allows “less secure apps,” you must:
+
+Enable 2-Step Verification in your Google account.
+
+Generate an App Password (for example, for “Mail”).
+
+This gives you a 16-character password (e.g., abcd efgh ijkl mnop) — use that instead of your normal Gmail password.
+
+Step 2: Install required libraries
+pip install fastapi uvicorn python-multipart
+
+Step 3: Example FastAPI code
+from fastapi import FastAPI, Form
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+app = FastAPI()
+
+# Configure Gmail credentials
+GMAIL_USER = "your_email@gmail.com"
+GMAIL_PASSWORD = "your_app_password"
+
+@app.post("/send-email/")
+async def send_email(to: str = Form(...), subject: str = Form(...), message: str = Form(...)):
+    msg = MIMEMultipart()
+    msg["From"] = GMAIL_USER
+    msg["To"] = to
+    msg["Subject"] = subject
+    msg.attach(MIMEText(message, "plain"))
+
+    try:
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+            server.starttls()
+            server.login(GMAIL_USER, GMAIL_PASSWORD)
+            server.send_message(msg)
+        return {"status": "success", "message": "Email sent successfully"}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+
+
+--Run the app:
+
+uvicorn main:app --reload
+
+
+Then test it using FastAPI docs UI at:
+
+http://127.0.0.1:8000/docs
+
+
+
+-----XML stands for eXtensible Markup Language.
+It is a markup language used to store and transport data in a structured, readable, and machine-understandable format.
+
+
+
+-----JSON stands for JavaScript Object Notation.
+It is a lightweight format used to store and exchange data between applications — especially between a server and a web client.
+
+
+
+-----YAML stands for YAML Ain’t Markup Language.
+It is a human-readable data format used to store and share configuration or structured data, similar to JSON and XML — but much simpler and cleaner to read.
