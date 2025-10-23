@@ -1,0 +1,280 @@
+----LLM in Technology (Artificial Intelligence)
+
+LLM = Large Language Model
+
+An LLM is a type of artificial intelligence model designed to understand and generate human-like language.
+
+🔹 Examples:
+
+GPT-5 (the model you’re talking to now)
+
+ChatGPT
+
+Google Gemini
+
+Anthropic Claude
+
+Meta LLaMA
+
+🔹 How it works:
+
+Trained on massive amounts of text data (books, websites, code, etc.)
+
+Learns patterns in language — grammar, facts, logic, reasoning.
+
+Can answer questions, write essays, generate code, summarize text, translate languages, and more.
+
+
+
+-----What is Vibe Coding?
+
+Vibe coding means coding for fun or creativity, not for serious work or strict rules.
+You just follow your mood or “vibe” while writing code.
+
+ Example:
+
+You open your laptop, play some music 🎧, and start typing code —
+maybe making a fun design, animation, or small app without a fixed plan.
+
+You’re not worried about:
+
+syntax being perfect
+
+performance
+
+or completing a big project
+
+You just go with the flow and enjoy coding.
+
+
+
+----What is cloud computing?
+Cloud computing is the delivery of computing services (servers, storage, databases, networking, software, analytics, intelligence, etc.) over the internet (“the cloud”) instead of running them on your own physical hardware. Instead of buying and managing physical servers and data centers, you rent those resources from cloud providers and pay for what you use.
+
+Types:
+1.IaaS — Infrastructure as a Service
+Raw compute, storage, networking. You manage OS, runtime and apps.
+Example use: virtual machines, block storage, virtual networks.
+
+2.PaaS — Platform as a Service
+Managed platform for developing and running apps (databases, runtimes). You focus on code; provider manages OS and middleware.
+Example use: app hosting, managed databases, CI/CD platforms.
+
+3.SaaS — Software as a Service
+Fully managed applications delivered over the web. Users just use the app; provider handles everything else.
+
+Benefits:
+Cost efficiency: pay only for usage; less capital expense
+Scalability: handle traffic spikes without buying more servers
+Speed & agility: provision resources in minutes
+Global reach: deploy apps close to users worldwide
+Managed services: less ops work for databases, ML, analytics
+Innovation: access to cutting-edge tech (AI, big data tools)
+
+
+
+----What is a Website?
+
+A website is a collection of web pages connected under one domain name (like www.google.com) and accessible through the Internet using a browser.
+
+Each website serves a purpose — for example, to share information, sell products, teach, or entertain.
+
+--Main Features of a Website
+ 1. Basic Features
+
+These are essential parts that every website should have:
+
+Feature	Description
+Domain Name	The website’s address on the internet (e.g., www.example.com).
+Web Hosting	The server space where your website files are stored.
+Homepage	The main entry page — it introduces the website and guides visitors.
+Navigation Menu	Helps users move between pages (like Home, About, Contact).
+Content / Pages	Text, images, or videos that provide information.
+Responsive Design	The site looks good and works well on phones, tablets, and computers.
+Footer	The bottom section with links, copyright info, and contacts.
+ 2. Functional Features
+
+These make the website interactive and user-friendly.
+
+Feature	Description
+Contact Form	Lets users send messages or inquiries easily.
+Search Bar	Allows users to find content quickly.
+Login/Signup System	For user accounts, memberships, or dashboards.
+Multimedia Support	Displays images, videos, animations, etc.
+Social Media Integration	Links or embedded feeds from platforms like Instagram, LinkedIn, etc.
+SEO (Search Engine Optimization)	Improves how easily the site can be found on Google.
+Fast Loading Speed	Pages open quickly to keep users engaged.
+
+
+
+----AWS S3 (Simple Storage Service)
+🔹 What it is:
+
+AWS S3 is a cloud storage service used to store and retrieve any amount of data (like files, images, videos, documents, backups, etc.) over the Internet.
+
+🔹 In simple words:
+
+It’s like Google Drive or Dropbox, but for developers and companies — more powerful, secure, and scalable.
+
+🔹 Key Features:
+
+Stores unlimited files (called objects) inside buckets.
+
+Highly durable (your data is safe, stored in multiple locations).
+
+Access anytime, anywhere using the Internet.
+
+Used for: file storage, website hosting, backups, or data lakes.
+
+
+
+----2. AWS Lambda
+🔹 What it is:
+
+AWS Lambda is a serverless computing service.
+It lets you run your code without managing any servers — AWS handles everything.
+
+🔹 In simple words:
+
+You just write a function (small piece of code), upload it, and AWS runs it automatically when something happens (like a file upload or a button click).
+
+You pay only for the time your code runs — not for idle servers.
+
+🔹 Key Features:
+
+Serverless: no need to manage servers.
+
+Event-driven: runs when triggered (for example, when an image is uploaded to S3).
+
+Supports multiple languages (Python, Node.js, Java, etc.).
+
+Scales automatically.
+
+
+
+----3. AWS Kinesis
+🔹 What it is:
+
+AWS Kinesis is a real-time data streaming service.
+It collects, processes, and analyzes live data streams (like video, logs, or sensor data) instantly.
+
+🔹 In simple words:
+
+It’s used when data is coming continuously — not in files but as a stream, like a river of data flowing every second.
+
+🔹 Key Features:
+
+Handles real-time data (no delay).
+
+Works with data from IoT devices, social media, logs, or apps.
+
+Can connect with Lambda, S3, and databases for storage and processing.
+
+Four main services under Kinesis:
+
+Kinesis Data Streams – handles raw streaming data.
+
+Kinesis Data Firehose – delivers data to destinations like S3 or Redshift.
+
+Kinesis Data Analytics – analyzes streams in real time using SQL.
+
+Kinesis Video Streams – handles live video data.
+
+
+
+----ChatGPT
+What it is: ChatGPT is an AI conversational model from OpenAI, based on the GPT-(family) models (e.g., GPT-4, etc.).
+Key features:
+
+General-purpose language generation: creative writing, summarisation, answering questions, code generation.
+
+Strong ecosystem: many integrations, plugins, fine-tuning options.
+
+Good at structured, broad tasks where quality and polish matter.
+Typical use-case: writing essays, generating code, dialogue style Q&A, brainstorming.
+Limitations: may not always have the very latest real-time web data (depends on version), may slower or more expensive for real-time / streaming or ultra-large context tasks.
+
+
+
+----Gemini
+What it is: Gemini is the family of models by Google DeepMind / Google AI. It is multimodal (text + image + audio + other) and is positioned as a strong “thinking” model for a variety of tasks. 
+Gemini
++4
+Google DeepMind
++4
+IBM
++4
+
+Key features:
+
+Multimodal input: can handle text AND images (and in some variants audio / video) which is fewer in some competitors. 
+Wikipedia
++1
+
+Large context window in recent versions (e.g., the 2.5 line) and models optimised for reasoning, code, STEM tasks. 
+Google DeepMind
++1
+
+Good for tasks combining modalities (e.g., “look at this image + describe”, or “analyze this code + text”).
+Typical use‐case: advanced reasoning tasks, multimodal applications, developers building agents that control UI, etc.
+Limitations: Possibly more resource intensive; may require the latest subscription or access; depending on variant cost may be higher.
+
+
+
+----Perplexity AI
+What it is: Perplexity AI is a tool that combines conversational AI + real‐time web retrieval + citations. It often acts like a “next-gen search engine” with QA style responses. 
+arsturn.com
++2
+Reddit
++2
+
+Key features:
+
+Real-time web search / retrieval: it fetches recent info and uses citations. 
+arsturn.com
++1
+
+Clean interface oriented for research / fact‐checking.
+
+You might choose underlying models (depending on plan) and leverages retrieval as part of answer generation.
+Typical use‐case: when you need up-to-date facts, research assistance, quick answers with sources.
+Limitations: For deeper creative generation, the output may be less polished than a dedicated general‐LLM; only as good as the retrieval quality; may have subscription cost.
+
+
+
+----Grok
+What it is: Grok is an AI assistant by xAI (the company associated with Elon Musk). It emphasises real‐time information access (especially social media/trending data) and a more conversational, “personality”-rich interface. 
+gmelius.com
++2
+Graph AI
++2
+
+Key features:
+
+Real-time access to social media / latest events (in some variants).
+
+More informal / conversational style (some users describe it as “witty” or “rebellious”). 
+arsturn.com
+
+Possibly strong for tasks where you want trending insights, social-media sentiment, or quick commentary.
+Typical use‐case: tracking trending topics, social‐media insights, casual generation with a “voice”.
+Limitations: Might sacrifice some polish or depth compared to top general‐purpose models; depending on design may have fewer enterprise features; retrieval quality may vary.
+
+
+
+----DeepSeek
+What it is: DeepSeek (sometimes “DeepSeek AI”) is a Chinese AI company/model family that emphasises open‐source or more accessible large language models with efficient architectures. 
+DeepSeek
+
+Key features:
+
+Strong open‐source component / accessible model weights in some cases. 
+Wikipedia
++1
+
+Focus on efficiency (lower cost / compute) and pushing novel architectures (e.g., mixture-of-experts, vision/text compression) for long‐context tasks. 
+South China Morning Post
+
+Growing presence globally (but also regionally concentrated).
+Typical use‐case: researchers or organisations looking for more open models, experimenting with cutting‐edge architecture.
+Limitations / caution: As per external evaluations, there may be gaps in alignment, safety, some performance domains; may involve region‐specific constraints (data, regulation) and security concerns.
