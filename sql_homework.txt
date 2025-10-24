@@ -1,0 +1,439 @@
+----1. SQL (Structured Query Language)
+🔹 What it is:
+
+SQL is a standard programming language used to manage and interact with databases.
+
+It is not software, but a language — used in many database systems (like MySQL, Oracle, SQL Server, PostgreSQL, DB2, etc.).
+
+🔹 What you can do with SQL:
+
+Create and manage databases
+
+Insert, update, delete data
+
+Retrieve data using queries
+Example:
+SELECT name, age FROM students WHERE age > 18;
+
+
+----| Feature                        | **SQL**                  | **MySQL**                    | **PL/SQL**                              | **DB2**                           |
+| ------------------------------ | ------------------------ | ---------------------------- | --------------------------------------- | --------------------------------- |
+| **Type**                       | Language                 | Database Software            | Language Extension                      | Database Software                 |
+| **Developed By**               | ANSI/ISO Standard        | Oracle (originally MySQL AB) | Oracle Corporation                      | IBM                               |
+| **Purpose**                    | To manage and query data | To store & manage data       | To add logic (loops, conditions) to SQL | To store & manage enterprise data |
+| **Used In**                    | All RDBMS                | MySQL Server                 | Oracle Database                         | IBM DB2                           |
+| **Supports Programming Logic** | ❌ No                     | ❌ No                         | ✅ Yes                                   | ✅ Partial                         |
+| **Open Source**                | ✅ Yes (standard)         | ✅ Yes                        | ❌ No (Oracle only)                      | ❌ No                              |
+| **Example Use**                | `SELECT * FROM users;`   | `CREATE DATABASE app;`       | `BEGIN ... END;`                        | `SELECT * FROM emp;`              |
+
+
+
+
+-----What is a Cloud Server?
+
+A cloud server is a virtual server that runs on a cloud platform instead of your local computer or a physical machine in your office.
+It is hosted by cloud providers like Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure, etc.
+Cloud Server for SQL and MySQL
+Both SQL Server and MySQL can be hosted on the cloud.
+1. Cloud Server for SQL (Microsoft SQL Server)
+
+SQL Server (by Microsoft) is a relational database management system (RDBMS).
+
+When hosted on the cloud, it becomes Azure SQL Database (Microsoft’s cloud version).
+
+🔹 Features:
+
+Fully managed by Microsoft (no need to install or maintain servers)
+
+Automatic backup, scaling, and patching
+
+Secure access and encryption
+
+Pay only for what you use
+
+*Cloud platforms that support SQL Server:
+
+Microsoft Azure SQL Database → Microsoft’s own cloud SQL service
+
+Amazon RDS for SQL Server → Managed SQL on AWS
+
+Google Cloud SQL for SQL Server → Managed SQL on GCP
+
+ 2. Cloud Server for MySQL
+
+MySQL is an open-source RDBMS widely used in web apps.
+
+Cloud hosting lets you run MySQL databases without managing physical hardware.
+
+🔹 Features:
+
+Automatic backups
+
+Easy scaling (increase/decrease storage or CPU)
+
+High availability and replication
+
+Web-based management tools
+
+*Cloud platforms that support MySQL:
+
+Amazon RDS for MySQL (AWS)
+
+Google Cloud SQL for MySQL (GCP)
+
+Azure Database for MySQL (Microsoft Azure)
+
+Oracle Cloud MySQL Database Service
+
+
+
+----What is a Connection?
+
+A connection is a link between your application and a database.
+
+When your app (like a Python, Java, or web app) needs to read or write data in a database (like MySQL, SQL Server, or PostgreSQL), it first has to connect to that database.
+
+*Example:
+
+Imagine your app is a student portal and the database stores student records.
+When a student logs in:
+
+The app connects to the database.
+
+It fetches the student’s data.
+
+Then it closes the connection.
+
+---What is Connection Pooling?
+
+Connection pooling means reusing database connections instead of creating a new one every time.
+
+Creating a new connection is slow and uses a lot of resources (CPU, memory).
+So, instead of opening and closing connections repeatedly, the app keeps a pool (collection) of ready-to-use connections.
+
+When a user request comes:
+
+The app takes a connection from the pool.
+
+Uses it to query the database.
+
+Returns it to the pool for reuse.
+
+
+
+-----What is Open Source Contribution?
+
+Open Source means the source code of a project is publicly available — anyone can view, use, modify, and improve it.
+
+So, Open Source Contribution means helping to improve open-source projects by:
+
+fixing bugs 
+
+adding new features 
+
+improving documentation 
+
+testing code 
+
+helping other users 
+
+----How to Contribute (Step-by-Step)
+1️⃣ Find a Project
+
+Go to:
+
+GitHub
+
+GitLab
+
+Open Source Guide
+
+Search for projects related to your skills (e.g., Python, Web Dev, Data Science).
+
+Look for issues labeled:
+
+good first issue
+
+beginner friendly
+
+help wanted
+
+2️⃣ Fork the Repository
+
+Forking means creating your own copy of the project on your GitHub account.
+You can now make changes without affecting the original.
+
+3️⃣ Clone the Project
+
+Download the project to your computer:
+
+git clone https://github.com/your-username/project-name.git
+
+4️⃣ Create a New Branch
+
+Before changing anything:
+
+git checkout -b feature-name
+
+
+Example:
+
+git checkout -b fix-typo-in-readme
+
+5️⃣ Make Changes
+
+Fix a bug, add a feature, or improve documentation.
+
+Then run:
+
+git add .
+git commit -m "Fixed typo in README file"
+git push origin feature-name
+
+6️⃣ Create a Pull Request (PR)
+
+Go to your GitHub project → click "Compare & Pull Request".
+Describe your change briefly.
+Maintainers will review and merge it into the main project if it’s correct ✅.
+
+7️⃣ Get Feedback and Keep Contributing
+
+Sometimes maintainers might ask for small changes — that’s normal!
+You learn collaboration and teamwork in real development.
+
+
+
+-----Difference Between DDL and DML
+| **Feature**       | **DDL (Data Definition Language)**                               | **DML (Data Manipulation Language)**                    |
+| ----------------- | ---------------------------------------------------------------- | ------------------------------------------------------- |
+| **Purpose**       | Defines the **structure** of the database (tables, schema, etc.) | Used to **manipulate** or **change data** inside tables |
+| **Affects**       | Database **structure**                                           | Table **data (records)**                                |
+| **Examples**      | `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`                  | `SELECT`, `INSERT`, `UPDATE`, `DELETE`                  |
+| **Auto Commit**   | Automatically saves changes                                      | Needs **COMMIT** or **ROLLBACK** to save or undo        |
+| **Used By**       | Database administrators                                          | Developers / users handling data                        |
+| **Reversibility** | Usually **not reversible** once executed                         | Can be **reversed** using `ROLLBACK` before commit      |
+| **Example Query** | `CREATE TABLE Students (id INT, name VARCHAR(50));`              | `INSERT INTO Students VALUES (1, 'Rahul');`             |
+
+
+
+
+-----difference between var, var char and char
+| Feature     | `CHAR`                | `VARCHAR`                | `VAR`                          |
+| ----------- | --------------------- | ------------------------ | ------------------------------ |
+| Full Form   | Character             | Variable Character       | Variable (programming keyword) |
+| Storage     | Fixed length          | Variable length          | Not applicable in SQL          |
+| Space Used  | Always same (padded)  | Depends on actual data   | —                              |
+| Speed       | Faster for fixed data | Slightly slower          | —                              |
+| Padding     | Adds spaces           | No padding               | —                              |
+| Typical Use | Codes, abbreviations  | Names, emails, addresses | Programming (not SQL)          |
+| SQL Support | ✅ Yes                 | ✅ Yes                    | ❌ No                        
+
+
+
+-----Difference Between SQL and NoSQL
+| **Feature**               | **SQL Database**                                                  | **NoSQL Database**                                                               |
+| ------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **Full Form**             | Structured Query Language                                         | Not Only SQL                                                                     |
+| **Data Model**            | **Structured (tables)** — rows & columns                          | **Unstructured / Semi-structured** — documents, key-value, graph, etc.           |
+| **Schema**                | **Fixed schema** (must define columns first)                      | **Dynamic / Flexible schema** (can add new fields anytime)                       |
+| **Scalability**           | **Vertical scaling** (add more power to one server)               | **Horizontal scaling** (add more servers easily)                                 |
+| **Transactions**          | Supports **ACID** (Atomicity, Consistency, Isolation, Durability) | Often supports **BASE** (Basically Available, Soft state, Eventually consistent) |
+| **Query Language**        | Uses **SQL**                                                      | Uses **custom queries / APIs** (depends on database type)                        |
+| **Best For**              | Structured data with relationships                                | Unstructured or rapidly changing data                                            |
+| **Examples**              | MySQL, PostgreSQL, SQL Server, Oracle                             | MongoDB, Cassandra, Redis, DynamoDB, Neo4j                                       |
+| **Storage Type**          | Tables with fixed columns                                         | Collections, Documents, Key-Value pairs, Graphs                                  |
+| **Joins (Relationships)** | Supports JOIN operations                                          | Usually doesn’t use JOINs; stores nested data                                    |
+| **Ideal Use Case**        | Banking, ERP, Inventory, E-commerce                               | Social media, IoT, Big Data, Real-time analytics                                 |
+
+
+
+
+-----Difference Between RAM and ROM
+| **Feature**               | **RAM (Random Access Memory)**                            | **ROM (Read Only Memory)**                           |
+| ------------------------- | --------------------------------------------------------- | ---------------------------------------------------- |
+| **Full Form**             | Random Access Memory                                      | Read Only Memory                                     |
+| **Type of Memory**        | **Volatile** (data is lost when power is off)             | **Non-Volatile** (data stays even when power is off) |
+| **Main Function**         | Temporarily stores data and instructions currently in use | Permanently stores essential instructions (firmware) |
+| **Data Storage Duration** | Temporary                                                 | Permanent                                            |
+| **Can We Modify Data?**   | Yes, data can be read and written                         | Usually No (or very limited modification)            |
+| **Speed**                 | Very Fast                                                 | Slower compared to RAM                               |
+| **Used For**              | Running programs, OS, and apps in real time               | Storing BIOS, firmware, and boot information         |
+| **Example**               | DDR4, DDR5 RAM in computers                               | BIOS chip, firmware in embedded devices              |
+| **Size (in computers)**   | Usually large (GBs)                                       | Usually small (MBs or KBs)                           |
+| **Access Type**           | Read & Write                                              | Mostly Read-only                                     |
+
+
+
+-----What is BIOS?
+
+BIOS stands for Basic Input/Output System.
+It is a built-in program stored in the computer’s ROM (Read Only Memory) that helps your computer start up and load the operating system.
+How BIOS Works (Step-by-Step)
+
+Let’s go step by step 👇
+
+*Power ON
+
+You press the power button.
+
+BIOS starts running from the ROM chip on the motherboard.
+
+* POST (Power-On Self Test)
+
+BIOS checks whether important hardware (like CPU, RAM, keyboard, hard drive, etc.) is connected and working.
+
+If there’s a problem, it shows error beeps or messages.
+
+* Boot Loader Execution
+
+Once hardware is okay, BIOS finds the boot device (hard disk, SSD, USB, etc.).
+
+It loads the bootloader (like GRUB or Windows Boot Manager).
+
+* Operating System Loads
+
+The bootloader then loads the operating system (OS) into RAM.
+
+Control is handed over from BIOS → OS.
+**Functions of BIOS
+| **Function**                  | **Description**                                                                   |
+| ----------------------------- | --------------------------------------------------------------------------------- |
+| **POST (Power-On Self Test)** | Checks if all essential hardware is working properly                              |
+| **Bootstrap Loader**          | Finds and loads the operating system                                              |
+| **BIOS Setup Utility**        | Lets you change system settings (boot order, time, date, etc.)                    |
+| **CMOS Setup**                | Works with CMOS memory to store settings like date/time                           |
+| **Driver Support**            | Provides low-level drivers for keyboard, display, and disk before OS drivers load |
+Where is BIOS Stored?
+
+BIOS is stored on a small ROM chip located on the motherboard of the computer.
+
+That’s why even if you remove the hard disk, you can still access the BIOS setup screen.
+
+
+-----What is Automation?
+
+Automation means using software tools or scripts to perform tasks automatically, without manual effort.
+Why Automation is Used
+| **Reason**                | **Description**                                          |
+| ------------------------- | -------------------------------------------------------- |
+| 🕒 **Saves Time**         | Runs tests quickly compared to manual testing            |
+| 🔁 **Reusability**        | Test scripts can be reused for future builds             |
+| 📈 **Accuracy**           | Reduces human mistakes                                   |
+| ⚡ **Continuous Testing**  | Easily integrates with CI/CD tools like Jenkins          |
+| 🧪 **Regression Testing** | Runs all old test cases automatically after code changes |
+
+
+Popular Automation Frameworks for Web Application Testing
+
+A framework is a structured way to write and organize automated test scripts.
+
+Here are the main automation frameworks and tools used for web app testing 👇
+
+ 1. Selenium
+
+Most popular open-source web automation tool
+
+Supports multiple browsers (Chrome, Firefox, Edge, Safari)
+
+Works with many programming languages (Python, Java, C#, etc.)
+
+Can be integrated with tools like TestNG, JUnit, Jenkins
+
+2. Cypress
+
+Modern JavaScript-based testing tool.
+
+Works directly in the browser (fast execution).
+
+Best for React, Angular, and modern front-end apps.
+
+✅ Easy to set up
+✅ Real-time test execution
+
+ 3. Playwright
+
+Developed by Microsoft.
+
+Supports multiple browsers and devices.
+
+Handles end-to-end testing (E2E) easily.
+
+Supports languages like Python, Java, TypeScript.
+
+ 4. Puppeteer
+
+Built for Google Chrome automation.
+
+JavaScript-based.
+
+Commonly used for UI testing and web scraping.
+
+ 5. TestCafe
+
+Another JavaScript-based tool.
+
+No need for WebDriver.
+
+Easy setup for cross-browser testing.
+
+
+
+-----why we use only 1024 not 1025?
+We use 1024 (not 1025) because computers work in binary (base 2) — not in decimal (base 10).
+And 1024 = 2¹⁰, which is a perfect binary number.
+1️⃣ Computers Understand Binary
+
+Computers don’t count like humans (1, 2, 3, 4...).
+They use binary digits — 0s and 1s.
+
+So, all computer memory and data sizes are based on powers of 2:
+| Power of 2 | Binary Value | Decimal Equivalent |
+| ---------- | ------------ | ------------------ |
+| 2⁰         | 0000000001   | 1                  |
+| 2¹         | 0000000010   | 2                  |
+| 2²         | 0000000100   | 4                  |
+| 2³         | 0000001000   | 8                  |
+| ...        | ...          | ...                |
+| **2¹⁰**    | 10000000000  | **1024**           |
+2️⃣ Why 1024?
+
+Because 2¹⁰ = 1024 is the closest binary number to 1000.
+
+That’s why computer scientists started using 1 kilobyte (KB) = 1024 bytes —
+even though, in normal decimal counting, “kilo” means 1000.
+Example: Memory and Storage:
+| Term | Binary Definition                   | Decimal Equivalent |
+| ---- | ----------------------------------- | ------------------ |
+| 1 KB | 2¹⁰ bytes = **1024 bytes**          | ≈ 1000 bytes       |
+| 1 MB | 2²⁰ bytes = **1,048,576 bytes**     | ≈ 1 million bytes  |
+| 1 GB | 2³⁰ bytes = **1,073,741,824 bytes** | ≈ 1 billion bytes  |
+3️⃣ Why Not 1025?
+
+1025 = 2¹⁰ + 1, which is not a perfect binary power.
+
+Computers and memory addressing work in powers of 2 —
+so 1025 would break the binary alignment.
+
+It’s like having a box that holds 2, 4, 8, 16, 32 items…
+you wouldn’t suddenly make a box that holds 33 — it doesn’t fit the binary pattern
+
+
+
+-----What is Space Complexity?
+
+Space Complexity is the amount of memory (space) a program or algorithm uses while running — based on the size of the input.
+Components of Space Complexity:
+| **Component**       | **Meaning**                                     | **Example**                                              |
+| ------------------- | ----------------------------------------------- | -------------------------------------------------------- |
+| **Input Space**     | Memory used to store the **input data**         | If input array = [1,2,3], it takes memory for 3 elements |
+| **Auxiliary Space** | **Extra or temporary memory** used by algorithm | Temporary variables, recursion stack, etc.               |
+Space Complexity=Fixed Part+Variable Part
+
+Fixed Part → Constant memory used (for variables, constants, etc.)
+
+Variable Part → Depends on input size (like arrays, recursion stack, etc.)
+
+
+
+
+
