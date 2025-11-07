@@ -1,0 +1,256 @@
+----vulnerability:
+A vulnerability is a weakness or flaw in a system, software, network, or process that can be exploited by attackers to cause harm or gain unauthorized access.
+Example in cybersecurity:
+
+A bug in software that allows hackers to steal data.
+
+A weak password that can be easily guessed.
+
+An outdated system without security updates.
+Types of vulnerabilities:
+
+Software Vulnerabilities – coding errors, buffer overflows, SQL injection, etc.
+
+Network Vulnerabilities – insecure Wi-Fi, open ports, etc.
+
+Human Vulnerabilities – phishing, social engineering, weak passwords.
+
+Configuration Vulnerabilities – misconfigured servers or firewalls.
+----Manual Testing
+🔹 Definition:
+
+Manual testing is a software testing process where testers execute test cases manually — without using any automation tools — to find bugs or defects.
+Explanation:
+
+In manual testing, a tester checks whether the software behaves as expected by following written test cases or exploring the application.
+It relies on human observation and is used in the initial stages of development or for small projects.
+
+🔹 Example:
+
+Let’s say you are testing a login page manually:
+
+Open the application.
+
+Enter correct username and password → Check if login is successful.
+
+Enter wrong password → Check if it shows “Invalid credentials.”
+
+Leave fields blank → Check if error message appears.
+----Automation Testing
+🔹 Definition:
+
+Automation testing is a process where software tools and scripts automatically execute test cases, compare actual results with expected results, and generate reports.
+
+🔹 Explanation:
+
+Instead of doing the same test repeatedly by hand, automation tools (like Selenium, Cucumber, etc.) run tests automatically.
+It saves time, effort, and cost for large or repetitive tasks.
+
+🔹 Example:
+
+You write a test script that opens the browser, enters login details, and checks if the dashboard loads successfully — automatically every time the code changes.
+----Selenium
+🔹 Definition:
+
+Selenium is an open-source automation tool used to automate web applications for testing purposes.
+
+🔹 Explanation:
+
+Selenium works with browsers (like Chrome, Firefox, Edge) and supports different programming languages like Python, Java, C#, JavaScript etc.
+It simulates user actions like clicking buttons, typing text, and navigating pages.
+----4. Cucumber
+🔹 Definition:
+
+Cucumber is a testing framework used for Behavior Driven Development (BDD).
+It allows writing test cases in plain English using the Gherkin language, making it easy for non-programmers (like business analysts) to understand.
+
+🔹 Explanation:
+
+Cucumber integrates with tools like Selenium to automate the tests described in simple sentences.
+The test steps are written in a .feature file.
+----SIT — System Integration Testing
+🔹 Definition:
+
+System Integration Testing (SIT) is a level of software testing where individual modules or systems are combined and tested as a group to verify that they work correctly together.
+
+🔹 Purpose:
+
+To make sure different parts of the system interact properly — like APIs, databases, user interfaces, and third-party services.
+
+🔹 Example:
+
+Imagine an e-commerce application with these modules:
+
+Login system
+
+Product catalog
+
+Shopping cart
+
+Payment gateway
+
+In SIT, testers check if:
+
+After logging in, the user can view the product catalog.
+
+Selected products move correctly into the shopping cart.
+
+Payment module receives correct details from the cart and processes them successfully.
+
+If one module fails to pass data correctly to another (say, cart not updating after payment), SIT will catch it.
+----SAT — System Acceptance Testing
+🔹 Definition:
+
+System Acceptance Testing (SAT) (sometimes also called User Acceptance Testing (UAT) in broader terms) is done to verify the entire system against business requirements before it goes live.
+
+🔹 Purpose:
+
+To confirm that the system meets user or client expectations and is ready for production.
+
+🔹 Example:
+
+Continuing the e-commerce example:
+
+Check if a customer can log in, search, purchase, and receive an order confirmation successfully.
+
+Ensure email notifications, order tracking, and payment confirmations work as expected.
+
+SAT ensures the complete end-to-end process behaves correctly from the user’s perspective.
+----how to find web application vulnerability
+1) Start with the right mindset & permissions
+
+Always have explicit written permission (scope, dates, allowed tests). Unauthorized testing is illegal.
+
+Use a staged / test environment that mirrors production whenever possible to avoid data loss or downtime.
+
+Follow a responsible disclosure process if you find issues. 
+OWASP Cheat Sheet Series
++1
+
+2) High-level methodology (repeat each release)
+
+Inventory & attack surface mapping — enumerate hosts, endpoints, APIs, third-party integrations, mobile/Web clients, and open ports.
+
+Threat modeling — identify high-value assets (PII, payment flows) and likely attacker goals.
+
+Automated scanning — SAST/SCA for code and dependencies; DAST/IAST on running apps.
+
+Manual review / targeted tests — focus on business logic, auth, access control, and chained issues that scanners miss.
+
+Exploit verification (safely) — confirm impact with minimal, non-destructive proof (only when authorized).
+
+Report & remediate — document steps, risk, and fixes; re-test after patching. 
+Imperva
++1
+
+3) What to scan for (use OWASP Top 10 as your map)
+
+Use the OWASP Top 10 as a prioritized checklist (Broken Access Control, Injection, XSS, Insecure Design, Supply-chain failures, Security Misconfiguration, etc.). This is the industry’s starting point for web app risks. 
+OWASP Foundation
++1
+
+4) Automated approaches (what they do and when)
+
+SAST (Static Application Security Testing) — scans source/binaries early (coding phase) to find unsafe patterns in code. Good for early detection. 
+Imperva
+
+SCA (Software Composition Analysis) — finds insecure/outdated open-source components (vulnerable libraries).
+
+DAST (Dynamic Application Security Testing) — scans the running application from the outside (simulates attacker behavior). Good at runtime/config issues. 
+Cobalt
++1
+
+IAST (Interactive AST) — runs inside the app to combine static and dynamic benefits.
+
+RASP — runtime protection inside the app (not a replacement for testing).
+Tools examples: OWASP ZAP (free DAST/proxy), commercial scanners & SAST/SCA tools (Snyk, Checkmarx, Veracode, etc.). 
+ZAP
++1
+
+5) Manual testing focus areas (what humans are best at)
+
+Automated tools miss many business-logic and chained issues. Manual tests should include:
+
+Authentication & session management — weak password flows, account enumeration, session fixation/timeout, multi-factor bypass.
+
+Authorization / access control — horizontal and vertical privilege escalation, insecure direct object references (IDOR).
+
+Input validation & injection — confirm inputs are validated and parameterized (injection categories: SQL, OS, LDAP, NoSQL). (Describe, don’t craft exploit payloads.)
+
+Cross-Site Scripting (XSS) — output encoding and CSP checks.
+
+Cross-Site Request Forgery (CSRF) — test whether state-changing actions require proper tokens.
+
+Business logic flaws — discount stacking, workflow bypass, race conditions.
+
+File upload & deserialization — dangerous file handling and unsafe deserialization patterns.
+
+Security configuration — HTTP headers (HSTS, CSP), TLS config, error messages leaking sensitive info.
+
+APIs — rate limits, excessive data exposure, improper DB queries, broken auth.
+
+(Manual testing = think like attacker + model business workflows. Avoid providing exploit code here.)
+
+6) Typical tools (defensive, widely used)
+
+OWASP ZAP — free web-app proxy & scanner (great for crawling, active/passive scanning). 
+ZAP
++1
+
+Burp Suite — industry standard proxy (Community & Professional editions) for manual testing.
+
+Static tools / SCA — Snyk, Dependabot, OWASP Dependency-Check.
+
+CI/CD integration — run SAST/SCA in pipelines to block known issues early.
+
+Fuzzers / scanners — for inputs and API endpoints (built-in ZAP fuzzing, or dedicated fuzzers). 
+HackerOne
+
+7) Safe verification & proof-of-concepts
+
+If you must prove a vulnerability, capture minimal, non-destructive evidence (logs, screenshots, request/response with redacted sensitive data).
+
+Never expose or exfiltrate real user data as part of testing.
+
+Follow the vendor’s vulnerability disclosure policy (or national policy) for timelines and coordination. 
+OWASP Cheat Sheet Series
++1
+
+8) Prioritization & remediation
+
+Triage by impact (data exposure, account takeover, financial loss) and exploitability.
+
+Fix root causes: use parameterized queries, output encoding, strict access checks, patch/update dependencies, and least privilege.
+
+Add automated checks in CI: SAST, SCA, unit tests that assert secure defaults.
+
+9) Learning & processes
+
+Adopt Shift-Left: integrate SAST/SCA in development and train devs on secure coding and OWASP Top 10.
+
+Run regular pentests by authorized professionals and periodic automated scans.
+
+Create a vulnerability disclosure / bug bounty program if you operate public-facing services. 
+Bugcrowd
++1
+
+10) Quick checklist (copy/print)
+
+ Inventory endpoints, APIs, 3rd-party integrations
+
+ Run SCA for dependencies; fix high-risk libs
+
+ Run SAST on main branches (fail build for critical findings)
+
+ Run DAST scan (ZAP or commercial) against staging
+
+ Manual test: auth, access control, business flows, file upload
+
+ Verify TLS, headers, error handling, logging & monitoring
+
+ Document, report, patch, and re-scan
+-----What is a Schema?
+🔹 Definition:
+
+A schema is the structure or blueprint of a database.
+It defines how data is organized, including tables, columns, relationships, views, indexes, and constraints.
