@@ -1,0 +1,139 @@
+----what are other architectures than RestAPI'S?
+1. SOAP (Simple Object Access Protocol)
+
+Type: Protocol-based
+Uses: XML for request and response
+Key points:
+
+Older but very standardized (used in enterprise apps and banking systems).
+
+Strict rules with WSDL (Web Services Description Language).
+
+Supports stateful operations, security standards (WS-Security), and transactional reliability.
+2. GraphQL
+
+Type: Query-based API (developed by Facebook)
+Key points:
+
+Clients can request exactly the data they need, no more or less.
+
+Single endpoint for all queries and mutations.
+
+Reduces network calls and over-fetching problems.
+3. gRPC (Google Remote Procedure Call)
+
+Type: Binary protocol (uses HTTP/2 and Protocol Buffers)
+Key points:
+
+Super fast and efficient for microservices.
+
+Supports streaming requests/responses.
+
+Language-independent (works with Python, Java, Go, etc.).
+4. WebSockets
+
+Type: Full-duplex communication channel
+Key points:
+
+Real-time, two-way communication between client and server.
+
+Unlike REST (which is request-response), WebSockets stay always connected.
+5. JSON-RPC / XML-RPC
+
+Type: Remote Procedure Call (RPC)
+Key points:
+
+Lightweight alternative to SOAP.
+
+Client calls methods directly on the server using JSON or XML format.
+
+
+
+-----What is YAML?
+
+YAML stands for “YAML Ain’t Markup Language”.
+It’s a human-readable data serialization format — used to store and transfer data between systems, similar to JSON or XML, but simpler and cleaner.
+Key Features:
+
+Human-readable — no braces {} or quotes required.
+
+Indentation-based — uses spaces (not tabs!) to define hierarchy.
+
+Supports complex data — lists, dictionaries, nested data.
+
+Language-independent — works with Python, Java, etc.
+
+Commonly used for:
+
+Configuration files (like docker-compose.yml, GitHub Actions, Kubernetes)
+
+Data exchange between services
+
+
+
+----1. UML — Unified Modeling Language
+🔹 Definition:
+
+UML (Unified Modeling Language) is a visual language used to design, visualize, and document the structure and behavior of software systems.
+
+It’s like a blueprint for software — helping developers and designers understand how the system’s parts interact.
+
+🔹 Purpose:
+
+To plan software structure before coding
+
+To document existing systems for maintenance
+
+To communicate design ideas between teams
+| Type                   | Purpose                                      | Example                     |
+| ---------------------- | -------------------------------------------- | --------------------------- |
+| **Class Diagram**      | Shows classes, attributes, and relationships | Object-Oriented Design      |
+| **Use Case Diagram**   | Shows how users interact with the system     | Login or Registration flows |
+| **Sequence Diagram**   | Shows order of interactions between objects  | API call flow               |
+| **Activity Diagram**   | Shows process or workflow                    | Online order process        |
+| **Component Diagram**  | Shows system components and dependencies     | Microservice structure      |
+| **Deployment Diagram** | Shows hardware/software deployment           | Cloud architecture setup    |
+
+
+
+
+-----Schema — Structure of a Database
+🔹 Definition:
+
+A Schema defines the structure and organization of data in a database — like a blueprint for how data is stored.
+
+It describes:
+
+Tables
+
+Columns (fields)
+
+Data types
+
+Relationships between tables (like primary/foreign keys)
+Example: Database Schema (Student Management System)
+| Table           | Columns                                                   |
+| --------------- | --------------------------------------------------------- |
+| **Students**    | student_id (PK), name, age, email                         |
+| **Courses**     | course_id (PK), course_name, duration                     |
+| **Enrollments** | enrollment_id (PK), student_id (FK), course_id (FK), date |
+Relationships:
+
+A student can enroll in many courses (one-to-many).
+
+A course can have many students.
+
+
+
+-----What is DROP TABLE?
+
+The DROP TABLE statement in SQL is used to permanently delete an entire table from the database — including all of its data, structure, and constraints.
+
+It’s like erasing the table completely from the database.
+Difference Between DROP, DELETE, and TRUNCATE:
+| Command      | Deletes Data      | Deletes Structure | Rollback Possible             | Use Case                |
+| ------------ | ----------------- | ----------------- | ----------------------------- | ----------------------- |
+| **DELETE**   | ✅ Yes (rows only) | ❌ No              | ✅ Yes (if within transaction) | Remove selected rows    |
+| **TRUNCATE** | ✅ Yes (all rows)  | ❌ No              | ❌ No                          | Clear all data quickly  |
+| **DROP**     | ✅ Yes             | ✅ Yes             | ❌ No                          | Remove table completely |
+
