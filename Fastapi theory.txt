@@ -1,0 +1,86 @@
+Q1. What is FastAPI and why is it popular?
+Theory
+
+FastAPI is a modern, high-performance Python web framework used to build APIs.
+It is built on:
+
+ASGI (Asynchronous Server Gateway Interface)
+
+Pydantic for data validation
+
+Starlette for web handling
+
+Why it is popular
+
+Very fast (comparable to Node.js, Go)
+
+Automatic validation using Pydantic
+
+Automatic API docs (Swagger & Redoc)
+
+Easy to use, easy to learn
+
+Supports async/await
+
+Built-in support for auth, middleware, background tasks
+
+
+Q2. Difference between FastAPI and Flask
+| Feature         | FastAPI                    | Flask              |
+| --------------- | -------------------------- | ------------------ |
+| Speed           | Very fast (async)          | Slower (sync only) |
+| Data validation | Automatic using Pydantic   | Manual             |
+| API docs        | Auto-generated             | Not built-in       |
+| Async support   | Yes                        | No                 |
+| Best use        | Modern APIs, microservices | Simple apps        |
+
+
+
+Q3. What is ASGI vs WSGI?
+WSGI
+
+Stands for Web Server Gateway Interface
+
+Used by Flask, Django (older versions)
+
+Only synchronous
+
+ASGI
+
+Stands for Asynchronous Server Gateway Interface
+
+Supports sync + async
+
+Used by FastAPI
+
+Handles websockets, async tasks, long polling
+
+
+Q4. What is Pydantic’s role in FastAPI?
+
+Pydantic handles:
+
+Data validation
+
+Data conversion
+
+Response models
+
+Error messages
+
+
+Q5. What is Dependency Injection in FastAPI?
+
+Dependency Injection (DI) means:
+
+You define reusable functions
+FastAPI injects them automatically into endpoints
+Reduces code duplication
+
+Example uses:
+
+DB connections
+
+Authentication
+
+Shared utilities
