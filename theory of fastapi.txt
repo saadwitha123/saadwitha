@@ -1,0 +1,123 @@
+Q11. Response Models in FastAPI (Detailed Theory)
+ What is a Response Model?
+
+A response model defines the shape/structure of the data your API will return to the client.
+It uses Pydantic models to:
+
+Control what fields are returned
+
+Filter out hidden or sensitive fields
+
+Format output
+
+Validate response
+
+Improve API documentation
+
+Ensure consistency across endpoints
+How Response Models Work
+
+You pass the model using response_model=ModelName
+
+FastAPI converts your returned data into that model
+
+Any extra fields are removed
+
+Missing fields cause an error
+
+
+
+Q12. Validation in FastAPI (Detailed Theory)
+
+FastAPI uses Pydantic for validation.
+
+ Validation Happens Automatically:
+
+When you send a request body
+
+When you send query parameters
+
+When you send path parameters
+
+When returning a response model
+
+FastAPI ensures:
+
+Correct data types
+
+Required fields exist
+
+String lengths
+
+Numeric ranges
+
+Custom validations
+
+
+
+Q13. Status Codes (Detailed Theory)
+Every API response has a status code, which tells the client what happened.
+
+ Common Status Codes in APIs
+| Code | Meaning          |
+| ---- | ---------------- |
+| 200  | OK               |
+| 201  | Resource Created |
+| 204  | No Content       |
+| 400  | Bad Request      |
+| 401  | Unauthorized     |
+| 403  | Forbidden        |
+| 404  | Not Found        |
+| 409  | Conflict         |
+| 422  | Validation Error |
+| 500  | Server Error     |
+
+
+
+
+Q14. Exception Handling (Detailed Theory)
+ Why Exception Handling?
+
+APIs must respond with clear, meaningful errors.
+
+FastAPI provides:
+
+ HTTPException
+
+For simple errors like not found, unauthorized
+
+ Custom Exception Handlers
+
+For advanced behavior
+
+ Validation Exceptions
+
+Automatic from Pydantic
+
+
+
+Q15. Middleware (Detailed Theory)
+ What is Middleware?
+
+Middleware is code that runs:
+ Uses of Middleware:
+
+Logging
+
+Security checks
+
+Authentication
+
+CORS handling
+
+Request/response modification
+
+ FastAPI Middleware Types
+
+CORS Middleware
+
+Custom Middleware
+
+Trusted Host Middleware
+
+GZip Middleware
