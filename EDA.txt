@@ -1,0 +1,189 @@
+What is EDA (Exploratory Data Analysis)?
+
+EDA stands for Exploratory Data Analysis.
+It is the first and most important step in Data Analysis and Machine Learning.
+
+EDA means looking at the data, understanding it, cleaning it, and discovering patterns before building any model.
+
+Steps Involved in EDA
+1. Understanding the Data
+
+Load the dataset
+
+Check:
+
+Number of rows and columns
+
+Data types
+
+Head & tail of the dataset
+
+2. Data Cleaning
+
+Handling missing values
+→ remove, fill with mean/median/mode
+
+Removing duplicates
+
+Fixing incorrect data types
+
+
+3. Univariate Analysis
+
+Analyzing one column at a time.
+
+For numerical data:
+
+Histogram
+
+Boxplot
+
+Mean, median, mode
+
+For categorical data:
+
+Count plot
+
+Frequency table
+
+
+4. Bivariate & Multivariate Analysis
+
+Analyzing relationship between two or more variables.
+
+Examples:
+
+Marks vs Study Hours
+
+Price vs Sales
+
+Age vs Salary
+
+Techniques:
+
+Scatter plot
+
+Heatmap
+
+Correlation matrix
+
+
+5. Detecting Outliers
+
+Outliers can harm machine learning models.
+
+Tools:
+
+Boxplots
+
+Z-score
+
+IQR method
+
+
+
+6. Data Visualization
+
+Most important part of EDA.
+
+Charts used:
+
+Bar chart
+
+Line chart
+
+Scatter plot
+
+Histogram
+
+Boxplot
+
+Heatmap
+
+Pie chart
+
+Visualization libraries:
+
+Matplotlib
+
+Seaborn
+
+Plotly
+
+
+
+
+1. Module
+ Smallest unit of code in Python
+
+A module is simply a single Python file (.py) that contains functions, classes, or variables.
+
+Example
+
+math.py → module
+student.py → module
+import math
+
+
+
+2. Package
+ A folder containing multiple modules
+
+A package is a directory (folder) with many .py files (modules) and a special file __init__.py.
+
+Example folder:
+my_package/
+    __init__.py
+    add.py
+    subtract.py
+    multiply.py
+
+
+
+3. Library
+ Collection of packages and modules
+
+A library is a larger collection of reusable code used to perform specific tasks.
+
+Libraries don’t force you to structure your program.
+You can choose what functions or modules you want to use.
+
+Examples:
+
+NumPy → numerical computations
+
+Pandas → data analysis
+
+Matplotlib → plotting
+
+Requests → API calls
+
+
+
+4. Framework
+ A collection of libraries + rules + structure
+
+A framework tells you HOW to build your application.
+You must follow its structure.
+
+It provides:
+
+Architecture
+
+Predefined methods
+
+Project structure
+
+Control flow (Inversion of Control)
+
+Examples:
+
+Django → web framework
+
+Flask → micro web framework
+
+React → front-end framework
+
+Angular → front-end framework
+
+Spring → Java framework
