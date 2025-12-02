@@ -1,0 +1,48 @@
+What is a Python Crawler?
+
+A Python crawler is a script or program that:
+
+Visits web pages automatically
+
+Collects information such as text, images, links, prices, product details
+
+Stores the extracted data for analysis
+
+This process is called web crawling or web scraping.
+
+ ----How a Python Crawler Works
+
+Send a request to a webpage
+
+Download the HTML
+
+Parse the HTML (using BeautifulSoup, lxml, etc.)
+
+Extract the required data
+
+Follow links to next pages (optional)
+
+Repeat the process
+
+
+
+
+CSV:
+A CSV file is a simple text file used to store tabular data (data arranged in rows and columns).
+Each line in the file is a row, and each value in a row is separated by a comma.
+
+Example:
+
+Name,Age,City
+Alice,25,Delhi
+Bob,30,Mumbai
+
+ Key Points
+
+CSV is easy to create and read
+
+Used for data storage, data transfer, and spreadsheets
+
+Can be opened in Excel, Google Sheets, Python, SQL, etc.
+
+File extension is .csv
