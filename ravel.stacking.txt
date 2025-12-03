@@ -1,0 +1,113 @@
+1. numpy.ravel()
+Definition
+
+ravel() is used to flatten a multi-dimensional array into a 1-D array.
+
+Key Points
+
+Returns a view of the original array when possible (so changes may affect original).
+
+Output is always 1-D.
+
+Example
+import numpy as np
+
+arr = np.array([[1, 2, 3],
+                [4, 5, 6]])
+
+flat = np.ravel(arr)
+
+print(flat)
+
+Output
+[1 2 3 4 5 6]
+
+ 2. Stacking in NumPy
+
+Stacking = joining multiple arrays together.
+
+NumPy provides:
+
+hstack() → horizontal stacking (side-by-side)
+
+vstack() → vertical stacking (top-to-bottom)
+
+dstack() → depth stacking (third dimension)
+
+stack() → stack along a new axis
+
+concatenate() → general concatenation (no new axis)
+
+ 2.1 Horizontal Stacking – hstack()
+
+Joins arrays column-wise.
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+print(np.hstack((a, b)))
+
+
+Output
+
+[1 2 3 4 5 6]
+
+ 2.2 Vertical Stacking – vstack()
+
+Joins arrays row-wise.
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+print(np.vstack((a, b)))
+
+
+Output
+
+[[1 2 3]
+ [4 5 6]]
+
+ 2.3 Depth Stacking – dstack()
+
+Stacks along 3rd axis.
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+print(np.dstack((a, b)))
+
+
+Output
+
+[[[1 4]
+  [2 5]
+  [3 6]]]
+
+ 2.4 stack() – adds a new axis
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+print(np.stack((a, b), axis=0))  # along rows
+print(np.stack((a, b), axis=1))  # along columns
+
+
+Output
+
+[[1 2 3]
+ [4 5 6]]
+
+[[1 4]
+ [2 5]
+ [3 6]]
+
+ 2.5 concatenate() – NO new axis
+a = np.array([[1, 2]])
+b = np.array([[3, 4]])
+
+print(np.concatenate((a, b), axis=0))
+
+
+Output
+
+[[1 2]
+ [3 4]]
