@@ -1,0 +1,37 @@
+------ Clipping in Pandas?
+
+Clipping in pandas means limiting the values of a Series or DataFrame within a specified range.
+
+If a value is lower than the minimum limit → it becomes the minimum.
+If a value is higher than the maximum limit → it becomes the maximum.
+
+---Function Used
+DataFrame.clip(lower=None, upper=None)
+
+
+lower → minimum allowed value
+
+upper → maximum allowed value
+
+
+----Why Do We Use Clipping?
+ 1. Remove extreme outliers
+
+Keep data within a reasonable range without deleting rows.
+
+ 2. Normalize values
+
+Useful in ML preprocessing.
+
+ 3. Ensure data stays valid
+
+Example: age cannot be below 0 or above 120.
+
+
+
+| Feature   | Explanation                       |
+| --------- | --------------------------------- |
+| Clip      | Restricts values to a range       |
+| lower     | Minimum allowed                   |
+| upper     | Maximum allowed                   |
+| Use cases | Outliers, normalization, cleaning |
