@@ -1,0 +1,30 @@
+------keep drop duplicates at last?
+Yes — you should usually keep drop_duplicates() at the end, especially in a data-cleaning pipeline.
+
+Why keep drop_duplicates() at the end?
+
+Because duplicates can appear after:
+
+filling missing values
+
+replacing values
+
+merging datasets
+
+converting data types
+
+string cleaning (strip, lower)
+
+removing null rows
+
+combining columns
+
+So if you remove duplicates early, new duplicates may form later
+
+Example
+df = df.replace('', None)
+df = df.fillna(method='ffill')
+df['name'] = df['name'].str.strip().str.lower()
+
+# Now drop duplicates at the END
+df = df.drop_duplicates()
